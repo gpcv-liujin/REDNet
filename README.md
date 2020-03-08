@@ -16,7 +16,7 @@ opencv-python 4.1 <br/>
 
 ## Data Preparation
 1. Download the WHU MVS dataset.  http://gpcv.whu.edu.cn/data/WHU_dataset/WHU_MVS_dataset.zip.<br/>
-2. Unzip the dataset to the ```WHU_MVS_dataset``` folder.<br/>
+2. Unzip the dataset to the ```WHU_MVS_dataset``` folder. <br/>
 
 ## Train
 1. In “train.py”, set ```data_root``` to your train data path ```YOUR_PATH/WHU_MVS_dataset/train```<br/>
@@ -57,29 +57,29 @@ f(pixel)  x0(pixel)  y0(pixel)
 DEPTH_MIN   DEPTH_MAX   DEPTH_INTERVAL
 IMAGE_INDEX 0 0 0 0 WIDTH HEIGHT
 ```
-Make sure the camera extrinsic is ```Twc [Rwc|twc]```, camera orientation is ```XrightYup```.
+Make sure the camera extrinsic is ```Twc [Rwc|twc]```, camera orientation is ```XrightYup```.<br/>
 
-1. In ```viewselect.py```, set ```dense_folder``` to your data path.
+1. In ```viewselect.py```, set ```dense_folder``` to your data path.<br/>
 2. Run:
 ```
 Python viewselect.py
 ```
-The output file ```viewpair.txt``` will stored in your data path.
+The output file ```viewpair.txt``` will stored in your data path.<br/>
 
-3. In ```predict.py```, set ```dense_folder``` to your data path. set ```model_dir``` to your model path ```MODEL_FOLDER```, set depth sample number ```max_d``` and image size ```max_w```, ```max_h```.
+3. In ```predict.py```, set ```dense_folder``` to your data path. set ```model_dir``` to your model path ```MODEL_FOLDER```, set depth sample number ```max_d``` and image size ```max_w```, ```max_h```.<br/>
 4. Run:
 ```
 Python predict.py
 ```
-The outputs were stored in ```YOUR_DATA_PATH/depths_rednet/```.
+The outputs were stored in ```YOUR_DATA_PATH/depths_rednet/```.<br/>
 
-We provided the script ```fusion.py``` to apply depth map filter for post-processing, which converted the per-view depth maps to 3D point cloud.
-5. In ```fusion.py```, set ```dense_folder``` to your data path.
+We provided the script ```fusion.py``` to apply depth map filter for post-processing, which converted the per-view depth maps to 3D point cloud.<br/>
+5. In ```fusion.py```, set ```dense_folder``` to your data path.<br/>
 6. Run:
 ```
 Python fusion.py
 ```
-Final point clouds are stored in ```YOUR_DATA_PATH/rednet_fusion/```.
+Final point clouds are stored in ```YOUR_DATA_PATH/rednet_fusion/```.<br/>
 
 
 ### Reference
