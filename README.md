@@ -74,6 +74,7 @@ Python predict.py
 The outputs were stored in ```YOUR_DATA_PATH/depths_rednet/```.<br/>
 
 We provided the script ```fusion.py``` to apply depth map filter for post-processing, which converted the per-view depth maps to 3D point cloud.<br/>
+
 5. In ```fusion.py```, set ```dense_folder``` to your data path.<br/>
 6. Run:
 ```
