@@ -19,7 +19,7 @@ opencv-python 4.1 <br/>
 2. Unzip the dataset to the ```WHU_MVS_dataset``` folder. <br/>
 
 ## Train
-1. In “train.py”, set ```data_root``` to your train data path ```YOUR_PATH/WHU_MVS_dataset/train```<br/>
+1. In ```train.py```, set ```data_root``` to your train data path ```YOUR_PATH/WHU_MVS_dataset/train```<br/>
 2. Train REDNet (TITAN RTX 2080Ti 24G):<br/>
 ```
 python train.py
@@ -31,10 +31,10 @@ Unzip it to ```MODEL_FOLDER```folder.<br/>
 2. In ```test.py```, set ```dense_folder``` to your test data path ```YOUR_PATH/WHU_MVS_dataset/test```, set ```model_dir``` to your model path ```MODEL_FOLDER```, set depth sample number ```max_d```.<br/>
 3. Run REDNet：<br/>
 ```
-Python test.py 
+python test.py 
 ```
 
-The test outputs were stored in ```YOUR_PATH/WHU_MVS_dataset/test/depths_rednet/```, including depth map ```XXX_init.pfm```, probability map ```XXX_prob.pfm```, scaled images ```XXX.jpg``` and camera parameters ```XXX.txt```.<br/>
+The test outputs are stored in ```YOUR_PATH/WHU_MVS_dataset/test/depths_rednet/```, including depth map ```XXX_init.pfm```, probability map ```XXX_prob.pfm```, scaled images ```XXX.jpg``` and camera parameters ```XXX.txt```.<br/>
 
 
 ## Predict 
@@ -59,29 +59,29 @@ IMAGE_INDEX 0 0 0 0 WIDTH HEIGHT
 ```
 Make sure the camera extrinsic is ```Twc [Rwc|twc]```, camera orientation is ```XrightYup```.<br/>
 
-1. In ```viewselect.py```, set ```dense_folder``` to your data path.<br/>
+1. In ```viewselection.py```, set ```dense_folder``` to your data path.<br/>
 2. Run:
 ```
-Python viewselect.py
+python viewselection.py
 ```
-The output file ```viewpair.txt``` will stored in your data path.<br/>
+The output file ```viewpair.txt``` is stored in your data path.<br/>
 
-3. In ```predict.py```, set ```dense_folder``` to your data path. set ```model_dir``` to your model path ```MODEL_FOLDER```, set depth sample number ```max_d``` and image size ```max_w```, ```max_h```.<br/>
+3. In ```predict.py```, set ```dense_folder``` to your data path. Set ```model_dir``` to your model path ```MODEL_FOLDER```, set depth sample number ```max_d``` and image size ```max_w```, ```max_h```.<br/>
 4. Run:
 ```
-Python predict.py
+python predict.py
 ```
-The outputs were stored in ```YOUR_DATA_PATH/depths_rednet/```.<br/>
+The outputs are stored in ```YOUR_DATA_PATH/depths_rednet/```.<br/>
 
 We provided the script ```fusion.py``` to apply depth map filter for post-processing, which converted the per-view depth maps to 3D point cloud.<br/>
 
 5. In ```fusion.py```, set ```dense_folder``` to your data path.<br/>
 6. Run:
 ```
-Python fusion.py
+python fusion.py
 ```
 Final point clouds are stored in ```YOUR_DATA_PATH/rednet_fusion/```.<br/>
 
 
 ### Reference
-This project is based on the implementation of ```R-MVSNet```. Thanks Yao, Yao for providing the source code (https://github.com/YoYo000/MVSNet)
+This project is based on the implementation of ```R-MVSNet```. Thank Yao, Yao for providing the source code (https://github.com/YoYo000/MVSNet)
