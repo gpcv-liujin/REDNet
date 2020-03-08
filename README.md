@@ -6,30 +6,30 @@ implementation of REDNet (CVPR 2020)
 The proposed network was trained and tested on a single NVIDIA TITAN RTX 2080Ti (24G).
 
 ## Requirements
-CUDA 10.0<br/>
-cudnn 7.6<br/>
-python 3.6<br/>
-tensorflow-gpu 1.13.1<br/>
-numpy 1.18<br/>
-opencv-python 4.1<br/>
+CUDA 10.0
+cudnn 7.6
+python 3.6
+tensorflow-gpu 1.13.1
+numpy 1.18
+opencv-python 4.1
 
 
 ## Data Preparation
-1.	Download the WHU MVS dataset.  http://gpcv.whu.edu.cn/data/WHU_dataset/WHU_MVS_dataset.zip.
-2.	Unzip the dataset to the ```WHU_MVS_dataset``` folder.
+1.Download the WHU MVS dataset.  http://gpcv.whu.edu.cn/data/WHU_dataset/WHU_MVS_dataset.zip.<br/>
+2.Unzip the dataset to the ```WHU_MVS_dataset``` folder.<br/>
 
 ## Train
-In “train.py”, set ```data_root``` to your train data path ```YOUR_PATH/WHU_MVS_dataset/train```<br/>
-Train REDNet (TITAN RTX 2080Ti 24G):<br/>
+1.In “train.py”, set ```data_root``` to your train data path ```YOUR_PATH/WHU_MVS_dataset/train```<br/>
+2.Train REDNet (TITAN RTX 2080Ti 24G):<br/>
 ```
 python train.py
 ```
 
 ## Test
-Download the pre-trained REDNet model (https://pan.baidu.com/s/13BfLJ3sNfQL_933wZjR8PA, code：ohqx)<br/>
+1.Download the pre-trained REDNet model (https://pan.baidu.com/s/13BfLJ3sNfQL_933wZjR8PA, code：ohqx)<br/>
 Unzip it to ```MODEL_FOLDER```folder.<br/>
-In ```test.py```, set ```dense_folder``` to your test data path ```YOUR_PATH/WHU_MVS_dataset/test```, set ```model_dir``` to your model path ```MODEL_FOLDER```, set depth sample number ```max_d```.<br/>
-Run REDNet：<br/>
+2.In ```test.py```, set ```dense_folder``` to your test data path ```YOUR_PATH/WHU_MVS_dataset/test```, set ```model_dir``` to your model path ```MODEL_FOLDER```, set depth sample number ```max_d```.<br/>
+3.Run REDNet：<br/>
 ```
 Python test.py 
 ```
@@ -59,23 +59,23 @@ IMAGE_INDEX 0 0 0 0 WIDTH HEIGHT
 ```
 Make sure the camera extrinsic is ```Twc [Rwc|twc]```, camera orientation is ```XrightYup```.
 
-In ```viewselect.py```, set ```dense_folder``` to your data path.
-Run:
+1.In ```viewselect.py```, set ```dense_folder``` to your data path.
+2.Run:
 ```
 Python viewselect.py
 ```
 The output file ```viewpair.txt``` will stored in your data path.
 
-In ```predict.py```, set ```dense_folder``` to your data path. set ```model_dir``` to your model path ```MODEL_FOLDER```, set depth sample number ```max_d``` and image size ```max_w```, ```max_h```.
-Run:
+3.In ```predict.py```, set ```dense_folder``` to your data path. set ```model_dir``` to your model path ```MODEL_FOLDER```, set depth sample number ```max_d``` and image size ```max_w```, ```max_h```.
+4.Run:
 ```
 Python predict.py
 ```
 The outputs were stored in ```YOUR_DATA_PATH/depths_rednet/```.
 
 We provided the script ```fusion.py``` to apply depth map filter for post-processing, which converted the per-view depth maps to 3D point cloud.
-In ```fusion.py```, set ```dense_folder``` to your data path.
-Run:
+5.In ```fusion.py```, set ```dense_folder``` to your data path.
+6.Run:
 ```
 Python fusion.py
 ```
