@@ -1,5 +1,5 @@
 # REDNet
-implementation of REDNet (CVPR 2020)
+implementation of REDNet
 
 “A Novel Recurrent Encoder-Decoder Structure for Large-Scale Multi-view Stereo Reconstruction from An Open Aerial Dataset”(arxiv：https://arxiv.org/abs/2003.00637)
 
@@ -26,7 +26,7 @@ python train.py
 ```
 
 ## Test
-1. Download the pre-trained REDNet model (https://pan.baidu.com/s/13BfLJ3sNfQL_933wZjR8PA, code：ohqx)<br/>
+1. Download the pre-trained REDNet model (http://gpcv.whu.edu.cn/data/download/MODEL_FOLDER.zip) <br/>
 Unzip it to ```MODEL_FOLDER```folder.<br/>
 2. In ```test.py```, set ```dense_folder``` to your test data path ```YOUR_PATH/WHU_MVS_dataset/test```, set ```model_dir``` to your model path ```MODEL_FOLDER```, set depth sample number ```max_d```.<br/>
 3. Run REDNet：<br/>
