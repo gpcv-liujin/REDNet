@@ -26,7 +26,7 @@ python train.py
 ```
 
 ## Test
-1. Prepare the pre-trained REDNet model in MODEL_FOLDER/MODEL_FOLDER.zip
+1. Prepare the pre-trained REDNet model ```MODEL_FOLDER/MODEL_FOLDER.zip.```<br/>
 Unzip it to ```MODEL_FOLDER```folder.<br/>
 2. In ```test.py```, set ```dense_folder``` to your test data path ```YOUR_PATH/WHU_MVS_dataset/test```, set ```model_dir``` to your model path ```MODEL_FOLDER```, set depth sample number ```max_d```.<br/>
 3. Run REDNet：<br/>
