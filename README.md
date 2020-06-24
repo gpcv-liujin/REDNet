@@ -1,7 +1,7 @@
 # REDNet
 implementation of REDNet
 
-“A Novel Recurrent Encoder-Decoder Structure for Large-Scale Multi-view Stereo Reconstruction from An Open Aerial Dataset”(arxiv：https://arxiv.org/abs/2003.00637)
+“A Novel Recurrent Encoder-Decoder Structure for Large-Scale Multi-view Stereo Reconstruction from An Open Aerial Dataset” (CVPR 2020)
 
 The proposed network was trained and tested on a single NVIDIA TITAN RTX 2080Ti (24G).
 
@@ -26,7 +26,7 @@ python train.py
 ```
 
 ## Test
-1. Download the pre-trained REDNet model (http://gpcv.whu.edu.cn/data/download/MODEL_FOLDER.zip) <br/>
+1. Prepare the pre-trained REDNet model in MODEL_FOLDER/MODEL_FOLDER.zip
 Unzip it to ```MODEL_FOLDER```folder.<br/>
 2. In ```test.py```, set ```dense_folder``` to your test data path ```YOUR_PATH/WHU_MVS_dataset/test```, set ```model_dir``` to your model path ```MODEL_FOLDER```, set depth sample number ```max_d```.<br/>
 3. Run REDNet：<br/>
