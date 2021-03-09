@@ -129,8 +129,8 @@ def tr_load_cam(file, interval_scale=1):
         pera[0][i] = words[17 + i]
 
     f = pera[0][0]
-    x0 = pera[0][1] - pera[0][7] - (pera[0][10] * pera[0][11])  # whu
-    y0 = pera[0][2] - pera[0][8] - (pera[0][9] * pera[0][12])
+    x0 = pera[0][1]  # whu
+    y0 = pera[0][2]
 
     # K
     cam[1][0][0] = -f
