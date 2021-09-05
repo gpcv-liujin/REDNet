@@ -15,7 +15,8 @@ opencv-python 4.1 <br/>
 
 
 ## Data Preparation
-1. Download the WHU MVS dataset.  http://gpcv.whu.edu.cn/data/WHU_dataset/WHU_MVS_dataset.zip.<br/>
+1. Download the WHU MVS dataset.  http://gpcv.whu.edu.cn/data/WHU_dataset/WHU_MVS_dataset.zip.<br/> 
+         (The link in baidu disk: https://pan.baidu.com/s/1aGHFfW26Q8T4oCVa2tPZYQ  code：91ae)
 2. Unzip the dataset to the ```WHU_MVS_dataset``` folder. <br/>
 
 ## Train
